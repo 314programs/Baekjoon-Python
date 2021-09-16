@@ -1,6 +1,6 @@
 import collections
 import sys
-
+#Get input
 CaseCount = int(sys.stdin.readline().rstrip())
 for x in range(CaseCount):
   Commend = sys.stdin.readline().rstrip()
@@ -13,7 +13,7 @@ for x in range(CaseCount):
   Results = []
   RCount = 0
   Error = False
-
+#Count R instead of reversing the list everytime
   for i in range(len(Commend)):
     if len(TheList) == 0 and Commend[i] == 'D':
       Error = True
