@@ -1,2 +1,3 @@
 a,b=map(int,input().split())
-print((a+b)*(a-b))
+#Expand bracket
+print(a*a-b*b)
