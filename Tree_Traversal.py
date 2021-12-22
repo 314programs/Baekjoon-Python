@@ -4,6 +4,7 @@ class Node:
         self.left_node = left_node
         self.right_node = right_node
 
+#root, left, right
 def Preorder(node):
     print(node.data, end = "")
     if node.left_node != None:
@@ -11,6 +12,7 @@ def Preorder(node):
     if node.right_node != None:
         Preorder(Tree[node.right_node])
 
+#left, root, right
 def Inorder(node):
     if node.left_node != None:
         Inorder(Tree[node.left_node])
@@ -18,6 +20,7 @@ def Inorder(node):
     if node.right_node != None:
         Inorder(Tree[node.right_node])
 
+#left, right, root
 def Postorder(node):
     if node.left_node != None:
         Postorder(Tree[node.left_node])
