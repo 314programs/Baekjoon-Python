@@ -11,7 +11,8 @@ Cost = 0
 #Append connections through graph
 for y in range(Dimension):
     for x in range(Dimension):
-        if y != x:
+        #Changed y != x to y > x to avoid repetition, making this faster
+        if y > x:
             Connections.append([y,x,Connection_Graph[y][x]])
 
 #Basic kruskal algorithm
