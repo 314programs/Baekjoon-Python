@@ -22,15 +22,14 @@ for i in range(1, Students+1):
         Val_Zero.append(i)
 
 
+#Instead of using 2 for loops, just use 1 with an if to check if indegrees of item is 0
 while Val_Zero:
     Temp = Val_Zero.popleft()
 
     for item in Outdegrees[Temp]:
         Indegrees[item] -= 1
-    
-    for i in range(1, Students+1):
-        if Indegrees[i] == 0:
-            Indegrees[i] = -1
-            Val_Zero.append(i)
+        if Indegrees[item] == 0:
+            Indegrees[item] = -1
+            Val_Zero.append(item)
 
     print(Temp, end = ' ')
