@@ -1,15 +1,16 @@
+#Instead of slicing lists, use a simple formula to save time + memory
 NeededNum = int(input())
-NumList = [v for v in range(1,NeededNum)]
 Count = 0
 
 start = NeededNum-2
 end = NeededNum-1
 
-while end != start:
-    if sum(NumList[start:end]) == NeededNum:
+while end >= start:
+    Temp = int(0.5 * (end - start+1) * (end + start)) 
+    if Temp == NeededNum:
         Count += 1
 
-    if sum(NumList[start:end]) < NeededNum and start > 0:
+    if Temp < NeededNum and start > 0:
         start -= 1
     else:
         end -= 1        
