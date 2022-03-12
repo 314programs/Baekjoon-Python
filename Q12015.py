@@ -16,4 +16,3 @@ for i in range(list_len):
         #Update DP
         DP[index] = num_list[i]
 print(len(DP))
-print(' '.join(map(str, DP)))
